@@ -5,7 +5,7 @@ stage('Code Build')
 
                 cleanWs()
 
-                build.check([
+                build.chck([
 
                 branch: 'master',
 
