@@ -4,7 +4,7 @@ stage('Code Checkout')
 
                 cleanWs()
 
-                check.check([
+                status.check([
 
                 branch: 'master',
 
