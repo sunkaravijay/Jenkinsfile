@@ -16,7 +16,7 @@ stage('Code Checkout')
 
                 cleanWs()
 
-                status.build([
+                buil.check([
 
                 branch: 'master',
 
