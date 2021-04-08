@@ -18,9 +18,9 @@ stage('Code Checkout')
 
                 build.check([
 
-                branch: 'master',
+              command: 'build'
 
-                repo: 'https://github.com/Harshilbhardwaj47/App-src.git'
+                
 
                 ])
 
