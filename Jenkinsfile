@@ -14,7 +14,7 @@ stage('Code Checkout')
   
   stage('Code build')
 
-                cleanWs()
+                
 
                 build.check([
 
