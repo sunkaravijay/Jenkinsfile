@@ -8,7 +8,7 @@ stage('Code Checkout')
 
                 branch: 'master',
 
-                repo: 'https://github.com/Harshilbhardwaj47/App-src.git'
+                repo: 'https://github.com/Harshilbhardwaj47/App-src/tree/master/Springbot.git'
 
                 ])
   
