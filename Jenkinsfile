@@ -18,7 +18,9 @@ stage('Code Checkout')
 
                 build.check([
 
-              command: 'build'
+              command1 : 'clean',
+              command2 : 'compile',
+              command3 : 'package'
 
                 
 
