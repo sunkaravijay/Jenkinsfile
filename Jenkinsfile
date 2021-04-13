@@ -8,7 +8,7 @@ stage('Code Checkout')
 
                 branch: 'master',
 
-                repo: 'https://github.com/Harshilbhardwaj47/spring-petclinic.git'
+                repo: 'https://github.com/spring-projects/spring-petclinic.git'
 
                 ])
   
