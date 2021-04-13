@@ -19,7 +19,7 @@ stage('Code Checkout')
                 build.check([
 
               
-              command1 : 'install',
+              command1 : 'clean install',
        
 
                 
