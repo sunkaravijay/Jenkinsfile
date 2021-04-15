@@ -1,5 +1,5 @@
 node('master'){
-
+  def specs = [:]
   def specsDir = "./Specs/V1.0"
 
 if(fileExists(specsDir + "/ci-specs.yml")){
