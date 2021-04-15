@@ -4,7 +4,7 @@ node('master'){
 
 if(fileExists(specsDir + "/ci-specs.yml")){
 ci_specs = readYaml file : specsDir + "/ci-specs.yml"
-specs -specs = ci_specs
+specs = specs + ci_specs
 }
   println specs
 stage('Code Checkout')
