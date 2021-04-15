@@ -2,8 +2,8 @@ node('master'){
   def specs = [:]
   def specsDir = "./Specs/V1.0"
 
-if(fileExists(specsDir + "/ci-specs.yml")){
-ci_specs = readYaml file : specsDir + "/ci-specs.yml"
+if(fileExists(specsDir + "/ci-spec.yml")){
+ci_specs = readYaml file : specsDir + "/ci-spec.yml"
 specs = specs + ci_specs
 }
   println specs
