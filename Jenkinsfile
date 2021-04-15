@@ -1,14 +1,21 @@
 node('master'){
 
+  def specsDir = "./Specs/V1.0"
+
+if(fileExists(specsDir + "/ci-specs.yml")){
+ci_specs = readYaml file : specsDir + "ci/-specs.yml"
+specs -specs = ci_specs
+}
+  
 stage('Code Checkout')
 
                 cleanWs()
 
                 status.check([
 
-                branch: 'master',
+                branch: specs.SCM.branch,
 
-                repo: 'https://github.com/Harshilbhardwaj47/App-src.git'
+                repo: specs.SCM.repo
 
                 ])
   
@@ -19,7 +26,7 @@ stage('Code Checkout')
                 build.check([
 
               
-              command1 : 'clean install',
+              command1 : specs.Build.command,
        
 
                 
