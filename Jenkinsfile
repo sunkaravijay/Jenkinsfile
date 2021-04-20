@@ -27,7 +27,7 @@ specs = specs + ci_specs
                 build.check([
 
               
-              command1 : specs.Build.command,
+              command1 : specs.Build.command1,
        
 
                 
