@@ -5,7 +5,7 @@ stage('Code Checkout')
 
                 status.check([
 
-                branch: 'master',
+                branch: 'main',
 
                 repo: 'https://github.com/Harshilbhardwaj47/spring-petclinic.git'
                   
