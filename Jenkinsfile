@@ -1,41 +1,40 @@
-node('master'){
- 
-stage('Code Checkout')
- cleanWs()
+try {
+			node('master'){
 
-                status.check([
+				stage('Code Checkout')
+				cleanWs()
 
-                branch: 'main',
+				status.check([
 
-                repo: 'https://github.com/Harshilbhardwaj47/spring-petclinic.git'
-                  
-               ])
-  
-   def specs = [:]
-  def specsDir = "./Specs/V1.0"
+					branch: 'main',
 
-if(fileExists(specsDir + "/ci-spec.yml")){
-ci_specs = readYaml file : specsDir + "/ci-spec.yml"
-specs = specs + ci_specs
-}
-  
-  stage('Code build')
+					repo: 'https://github.com/Harshilbhardwaj47/spring-petclinic.git'
 
-                
+				])
 
-                build.check([
+				def specs = [:]
+				def specsDir = "./Specs/V1.0"
 
-              
-              command1 : specs.Build.command1,
-       
+				if(fileExists(specsDir + "/ci-spec.yml")){
+					ci_specs = readYaml file : specsDir + "/ci-spec.yml"
+					specs = specs + ci_specs
+				}
 
-                
-
-                ])
-
-}
-
- 
+				stage('Code build')
 
 
 
+				build.check([
+
+
+					command1 : specs.Build.command1,
+
+
+
+
+				])
+			}
+		} catch(Exception ex) {
+			println ex.getCause();
+			println ex.getMessage();
+		}
