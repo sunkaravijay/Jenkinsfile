@@ -12,13 +12,7 @@ try {
 
 				])
 
-				def specs = [:]
-				def specsDir = "./Specs/V1.0"
-
-				if(fileExists(specsDir + "/ci-spec.yml")){
-					ci_specs = readYaml file : specsDir + "/ci-spec.yml"
-					specs = specs + ci_specs
-				}
+				
 
 				stage('Code build')
 
@@ -27,7 +21,7 @@ try {
 				build.check([
 
 
-					command1 : specs.Build.command1,
+					command1 : "mvn clean install",
 
 
 
