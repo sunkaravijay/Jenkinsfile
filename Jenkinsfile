@@ -21,7 +21,7 @@ try {
 				build.check([
 
 
-					command1 : "mvn clean install",
+					command1 : "clean install",
 
 
 
