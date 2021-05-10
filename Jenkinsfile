@@ -2,7 +2,7 @@ try {
 			node('master'){
 
 				stage('Code Checkout')
-				cleanWs()
+				
 
 				status.check([
 
