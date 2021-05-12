@@ -29,7 +29,7 @@ try {
 				])
 				stage('Code Test')
 				
-				build.check([
+				build.test([
 
 
 					command2 : "test",
