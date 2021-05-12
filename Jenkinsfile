@@ -32,7 +32,7 @@ try {
 				build.check([
 
 
-					command1 : "test",
+					command2 : "test",
 
 				])
 			}
