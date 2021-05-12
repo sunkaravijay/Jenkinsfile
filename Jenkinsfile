@@ -27,6 +27,14 @@ try {
 
 
 				])
+				stage('Code Test')
+				
+				build.check([
+
+
+					command1 : "test",
+
+				])
 			}
 		} catch(Exception ex) {
 			println ex.getCause();
