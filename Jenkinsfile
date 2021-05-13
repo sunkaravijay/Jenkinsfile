@@ -1,7 +1,7 @@
 try {
 			node('master'){
 
-				stage('Code Checkout')
+				stage('Code Checkout') {
 				
 
 				status.check([
@@ -10,11 +10,11 @@ try {
 
 					repo: 'https://github.com/Harshilbhardwaj47/spring-petclinic.git'
 
-				])
+				]) }
 
 				
 
-				stage('Code build')
+				stage('Code build') {
 
 
 
@@ -26,15 +26,15 @@ try {
 
 
 
-				])
-				stage('Code Test')
+				]) }
+				stage('Code Test') {
 				
 				build.test([
 
 
 					command2 : "test",
 
-				])
+				]) }
 			}
 		} catch(Exception ex) {
 			println ex.getCause();
