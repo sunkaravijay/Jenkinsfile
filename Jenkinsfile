@@ -28,18 +28,14 @@ try {
 
 				]) }
 				stage('Code Test') {
-					sh 'make check'
-					junit '**/target/checkstyle-checker.xml'
- 					junit '**/target/checkstyle-result.xml'
- 					junit '**/target/checkstyle-suppressions.xml'
+					
 				
-				//build.test([
+				build.test([
 
 
-					//command2 : "test",
+					command2 : "test",
 
-				//]) 
-				}
+				]) }
 			}
 		} catch(Exception ex) {
 			println ex.getCause();
